@@ -17,7 +17,12 @@ def generate_keystream(seed, message_length):
     return keystream    
 #Ne vazhdim funksioni one time pad encryption (otp_encrypt)
 
-def etp_encrypt(message, seed):
-    message_bytes = message.encode()
-    keystream = generate_keystream(seed, len(message_bytes))
-    encrypted_message = bytearray()
+def otp_encrypt(message, seed):
+    message_bytes = message.encode() #Mesazhi ne byte
+    keystream = generate_keystream(seed, len(message_bytes)) #po e gjenerojm celesin
+    encrypted_message = bytearray()  #E inicializojme mesazhin e enkriptuar
+    for i in range(len(message_bytes)): #po enkriptojm
+        encrypted_byte = message_bytes[i] ^ keystream[i]
+        encrypted_message.append(encrypted_byte)
+
+    return encrypted_message.hex() #mesazhi i enkriptuar
