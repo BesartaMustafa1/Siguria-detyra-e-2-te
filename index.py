@@ -24,5 +24,19 @@ def otp_encrypt(message, seed):
     for i in range(len(message_bytes)): #po enkriptojm
         encrypted_byte = message_bytes[i] ^ keystream[i]
         encrypted_message.append(encrypted_byte)
+return encrypted_message.hex() #mesazhi i enkriptuar
 
-    return encrypted_message.hex() #mesazhi i enkriptuar
+    def otp_decrypt(encrypted_hex, seed):
+    #Konverton mesazhin e koduar ne bajta duke perdorur formatin heksadecimal
+    encrypted_bytes = bytes.fromhex(encrypted_hex)
+    
+    #Gjenero nje celës me gjatesine e mesazhit te koduar ne bajta
+    keystream = generate_keystream(seed, len(encrypted_bytes))
+    
+    #Krijon nje objekt bytearray per te ruajtur mesazhin e dekriptuar
+    decrypted_message = bytearray()
+
+ 
+
+
+    
