@@ -36,6 +36,15 @@ return encrypted_message.hex() #mesazhi i enkriptuar
     #Krijon nje objekt bytearray per te ruajtur mesazhin e dekriptuar
     decrypted_message = bytearray()
 
+   #unaza per te shkeputur cdo bajt te mesazhit
+    for i in range(len(encrypted_bytes)):
+        #Ben operacionin XOR midis bajtit te koduar dhe celesit
+        decrypted_byte = encrypted_bytes[i] ^ keystream[i]
+        #Shton bajtin e dekriptuar ne objektin bytearray
+        decrypted_message.append(decrypted_byte)
+
+    #Kthen mesazhin e dekriptuar në forme teksti
+    return decrypted_message.decode()
  
 
 
