@@ -55,13 +55,6 @@ if __name__ == "__main__": #Kontrollojm a po behet run scripta si main program
 
     #Provojm qe programi ta pyes userin se a deshiron te dekriptoj mesazhin nese "po" ta shfaq mesazhin e dekriptuar nese "jo" printon nje tekst whatever.
 
-decrypt_question=input("Deshironi te dekriptoni mesaxhin? Y/N:") 
-if decrypt_question.lower()=='y':  #qita .lower() e kom bo per me marr edhe shkrojnat e vogla 
-    decrypted_message = otp_decrypt(encrypted_message,seed)
-    print ('Mesazhi i dekriptuar: '+ decrypted_message)
-elif decrypt_question.lower()=='n':
-    print("Operacioni u perfundua.")
-
 decrypt_question=input("Deshironi te dekriptoni mesazhin?Y/N:")
 if decrypt_question.lower()=='y': #qita.lower() e kom bo per me marr edhe shkronjat e vogla
     decrypted_message = otp_decrypt(encrypted_message,seed)
