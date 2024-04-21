@@ -24,9 +24,9 @@ def otp_encrypt(message, seed):
     for i in range(len(message_bytes)): #po enkriptojm
         encrypted_byte = message_bytes[i] ^ keystream[i]
         encrypted_message.append(encrypted_byte)
-return encrypted_message.hex() #mesazhi i enkriptuar
+    return encrypted_message.hex() #mesazhi i enkriptuar
 
-    def otp_decrypt(encrypted_hex, seed):
+def otp_decrypt(encrypted_hex, seed):
     #Konverton mesazhin e koduar ne bajta duke perdorur formatin heksadecimal
     encrypted_bytes = bytes.fromhex(encrypted_hex)
     
@@ -46,6 +46,8 @@ return encrypted_message.hex() #mesazhi i enkriptuar
     #Kthen mesazhin e dekriptuar në forme teksti
     return decrypted_message.decode()
  
-
+if __name__ == "__main__": #Kontrollojm a po behet run scripta si main program
+    message = input('Shkruani nje tekst: ') #Useri shtyp mesazhin qe deshiron te enkriptohet
+    seed = input('Jepni seed-in si integer ose string: ') #Useri jep vleren "seed" e cila mund te jete integer ose string
 
     
