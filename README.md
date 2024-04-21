@@ -3,7 +3,7 @@
 ### Fakullteti i inxhineris Elektrike dhe Komjuterike /Deparatamenti Inxhineri Kompjuterike dhe Softuerike <br>
 ### Detyra:  Implementimi i One time pad duke gjeneruar nje key stream nga nje int32 ose string seed. Implementimi i SymmetricAlgorithm qe ofron enkriptues dhe dekriptues per kete algoritem.<br>
 
-#### Punuar nga : 
+#### Punuar nga grupi 9: 
            Auron Musliu
            Aurore Smirqaku 
            Avdi Shabani 
