@@ -50,4 +50,5 @@ if __name__ == "__main__": #Kontrollojm a po behet run scripta si main program
     message = input('Shkruani nje tekst: ') #Useri shtyp mesazhin qe deshiron te enkriptohet
     seed = input('Jepni seed-in si integer ose string: ') #Useri jep vleren "seed" e cila mund te jete integer ose string
 
-    
+    encrypted_message = otp_encrypt(message, seed) #Therret funksionin "otp_encrypt" dhe e enkripton mesazhin me seed-in qe jep useri
+    print('Mesazhi i enkriptuar: ' + encrypted_message) #Shfaq mesazhin e enkriptuar
