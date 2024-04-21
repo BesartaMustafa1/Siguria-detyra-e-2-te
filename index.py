@@ -52,3 +52,5 @@ if __name__ == "__main__": #Kontrollojm a po behet run scripta si main program
 
     encrypted_message = otp_encrypt(message, seed) #Therret funksionin "otp_encrypt" dhe e enkripton mesazhin me seed-in qe jep useri
     print('Mesazhi i enkriptuar: ' + encrypted_message) #Shfaq mesazhin e enkriptuar
+
+    #Provojm qe programi ta pyes userin se a deshiron te dekriptoj mesazhin nese "po" ta shfaq mesazhin e dekriptuar nese "jo" printon nje tekst whatever.
