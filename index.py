@@ -61,3 +61,10 @@ if decrypt_question.lower()=='y':  #qita .lower() e kom bo per me marr edhe shkr
     print ('Mesazhi i dekriptuar: '+ decrypted_message)
 elif decrypt_question.lower()=='n':
     print("Operacioni u perfundua.")
+
+decrypt_question=input("Deshironi te dekriptoni mesazhin?Y/N:")
+if decrypt_question.lower()=='y': #qita.lower() e kom bo per me marr edhe shkronjat e vogla
+    decrypted_message = otp_decrypt(encrypted_message,seed)
+    print('Mesazhi i dekriptuar: '+ decrypted_message)
+elif decrypt_question.lower()=='n':
+        print("Operacioni u perfundua.")
